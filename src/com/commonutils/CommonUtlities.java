@@ -530,6 +530,216 @@ public static boolean selectDropdownByCssselector(String elementname,String page
 
 }
 
+
+/**
+ * @Method Name: getAttribute
+ * @Purpose: This method is used to get the attribute 
+ * @InputParameters:  elementname, pagename, Web element,String attribute
+ * @OutputParameter: attributevalue
+ * @Author: Raghavendra
+ */
+
+public static String getAttribute (String elementname,String pagename,WebElement element,String attribute)
+{
+String attributevalue="";
+try
+{
+	System.out.println("Code to get the attribute value");
+	
+	//Check if the attribute and Web element name is passed
+	
+	if((attribute.isEmpty()||attribute==null))
+	{
+			throw new Exception ("attribute can not be null or empty");
+	}
+	
+	if(element==null)
+	{
+		throw new Exception("Web Element "+elementname+" is not defined, please check");
+	}
+	
+	attributevalue =element.getAttribute(attribute);
+	
+}
+
+catch(Exception e)
+{
+			System.out.println(e.getMessage());
+}
+			
+return attributevalue;
+	
+}
+
+//******************Variables Declaration******************
+
+
+//=================================================================//
+
+/**
+ * @Method Name: getText
+ * @Purpose: This method is used to get the attribute 
+ * @InputParameters: elementname, pagename, element
+ * @OutputParameter: data
+ * @Author: Raghavendra
+ */
+
+public static String getTextForWebElement(String elementname,String pagename,WebElement element)
+{
+	String data="";
+
+try
+{
+	System.out.println("Trying to get the text");
+
+	//Check if the element value is passed or not
+
+	if((element==null))
+	{
+	
+	throw new Exception ("Element is not passed by the user");
+	}
+	
+	// get the text of the element user passed
+	data=element.getText();
+
+}
+
+catch(Exception e)
+{
+
+System.out.println(e.getMessage());
+}
+
+return data;
+}
+
+
+
+public boolean IsElementSelected(String elementname, String pagename, WebElement element) {
+
+//******************Variables Declaration******************
+
+
+//=================================================================//
+
+	/**
+	 * @Method Name: IsElementSelected
+	 * @Purpose: This method is used to check if element passed by user is selected or not 
+	 * @InputParameters: element name,page name, element
+	 * @OutputParameter: status
+	 * @Author: Raghavendra
+	 */
+
+
+boolean status = true;
+
+try {
+	
+	System.out.println("To check if user passed element is selected or not");
+				
+	//Check if the element value is passed or not
+	if(element==null)
+	{
+		throw new Exception("Web Element "+elementname+" is not defined, please check");
+	}
+	
+	status =element.isSelected();
+
+}
+
+catch (Exception e) {
+	System.out.println(e.getStackTrace());
+}
+
+
+	return status;
+	
+}
+
+public boolean IsElementDisplayed(String elementname, String pagename, WebElement element) {
+
+//******************Variables Declaration******************
+
+
+	//=================================================================//
+
+	/**
+	 * @Method Name: IsElementDisplayed
+	 * @Purpose: This method is used to check if element is displayed or  not 
+	 * @InputParameters: element name, pagename, element
+	 * @OutputParameter: status
+	 * @Author: Raghavendra
+	 * Test for commit
+	 */
+
+
+boolean status = true;
+
+try {
+	System.out.println("To check if user passed element is displayed or not");
+	
+	//Check if the element value is passed or not
+				
+	if(element==null)
+	{
+		throw new Exception("Web Element "+elementname+" is not defined, please check");
+	}
+	//To check if user required web element is displayed or not 		
+	status =element.isDisplayed();
+	}
+
+catch (Exception e) {
+	System.out.println(e.getStackTrace());
+}
+return status;
+}
+
+public boolean IsElementEnabled(String elementname, String pagename, WebElement element) {
+
+//******************Variables Declaration******************
+
+
+	//=================================================================//
+
+	/**
+	 * @Method Name: IsElementEnabled
+	 * @Purpose: This method is used to check user required element is enabled or disabled 
+	 * @InputParameters: element name, pagename, element
+	 * @OutputParameter: status
+	 * @Author: Raghavendra
+	 */
+
+
+boolean status = true;
+
+try {
+	System.out.println("To check if user passed element is enabled or not");
+	
+	//Check if the element value is passed or not
+	
+				
+	if(element==null)
+	{
+		throw new Exception("Web Element "+elementname+" is not defined, please check");
+	}
+	
+	status =element.isEnabled();
+
+}
+
+catch (Exception e) {
+	System.out.println(e.getStackTrace());
+}
+
+
+	return status;
+	
+}
+
+
+
+
 }
 
 
