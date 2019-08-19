@@ -22,6 +22,7 @@ public class CommonUtlities {
 	 * @Purpose:This method is used to launch the application with user specified url and browser
 	 * @Input Parameter:String browsername,String url
 	 * @Output Parameter:boolean 
+	 * @test
 	 */
 
 	public static boolean launchApplication(String browser,String url)
@@ -264,6 +265,7 @@ for(int i=0;i<=arr.length-1;i++)
 	 * @Method Name:selectDropDownByIndex
 	 * @Purpose:This method is used to select the drop down by using its index value
 	 * @Input Parameter:String elementname,String pageName, WebElement webElement,int indexValue
+	 * @author Shika
 	 * @Output Parameter:boolean
 	 */
 	
@@ -309,6 +311,7 @@ for(int i=0;i<=arr.length-1;i++)
 	 * @Purpose:This method is used to select the drop down by using the value given to the dropdown
 	 * @Input Parameter:String elementname,String pageName, WebElement webElement,String value
 	 * @Output Parameter:boolean
+	 * @author Shika
 	 */
 	
 	public static  boolean selectDropdownByValue(String elementname,String pageName, WebElement webElement,String value)
@@ -362,6 +365,7 @@ for(int i=0;i<=arr.length-1;i++)
 	 * @Purpose:This method is used to select the drop down by using the visible text displayed in the application.
 	 * @Input Parameter:String VisibleText,WebElement element,PageName pageName,String Visible Text
 	 * @Output Parameter:boolean
+	 * @author Shika
 	 */
 public static  boolean selectDropdownByVisibleText(String elementname,String pageName, WebElement webElement,String visibleText)
 	
@@ -476,6 +480,7 @@ public static  boolean selectDropdownByXpath(String elementname,String pageName,
  * @Purpose:This method is used to select the drop down by using the CSSSeletor of the dropdown.
  * @Input Parameter:String CssSelector
  * @Output Parameter:boolean
+ * @author Shika
  */
 
 public static boolean selectDropdownByCssselector(String elementname,String pageName, WebElement webElement, String CssSelector )
