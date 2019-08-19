@@ -6,6 +6,7 @@ import org.openqa.selenium.WebElement;
 import org.openqa.selenium.chrome.ChromeDriver;
 import org.openqa.selenium.firefox.FirefoxDriver;
 import org.openqa.selenium.interactions.Actions;
+import org.openqa.selenium.support.ui.Select;
 
 public class CommonUtlities {
 	
@@ -259,5 +260,275 @@ for(int i=0;i<=arr.length-1;i++)
 	}
 	return status;
 	}
+	/**
+	 * @Method Name:selectDropDownByIndex
+	 * @Purpose:This method is used to select the drop down by using its index value
+	 * @Input Parameter:String elementname,String pageName, WebElement webElement,int indexValue
+	 * @Output Parameter:boolean
+	 */
+	
+	public static  boolean selectDropdownByIndex(String elementname,String pageName, WebElement webElement,int indexValue)
+	{
+		boolean status=true;
+		try{
+			System.out.println("Selecting the dropdown  by pageName"+pageName+ "elementname" +elementname +" Webelement "+webElement+
+					"indexValue"+ indexValue );
+			//Check whether the pageName is not null
+			if (pageName==null)
+			{
+			throw new Exception("Page Name can not be null, please indicate on which page you reffering to");
+			}
+			//Check whether the webElement is found or not
+			if(webElement==null)
+			{
+			    throw new Exception("WebElement is null ,please enter the valid web element");
+			}
+			//selecting the element by indexValue
+			Select dropdown = new Select(webElement);
+			dropdown.selectByIndex(indexValue);
+			
+			System.out.println("Dropdown is selected by pageName"+pageName+ "elementname" +elementname +" Webelement "+webElement+
+					"indexValue"+ indexValue );
+		}
+		
+		
+		catch(Exception e){
+			status=false;
+			System.out.println(e.getStackTrace());
+		}
+		return status;
+
+	
+	
+		}
+	/**
+	 
+	 
+	 
+	 * @Method Name:selectDropDownByValue
+	 * @Purpose:This method is used to select the drop down by using the value given to the dropdown
+	 * @Input Parameter:String elementname,String pageName, WebElement webElement,String value
+	 * @Output Parameter:boolean
+	 */
+	
+	public static  boolean selectDropdownByValue(String elementname,String pageName, WebElement webElement,String value)
+	
+	{
+		boolean status=true;
+		try{
+			System.out.println("Selecting the dropdown  by pageName"+pageName+ "elementname" +elementname +" Webelement " +webElement+
+					"Value"+ value );
+		//Check whether the page Name is not null
+			if (pageName==null)
+			{
+			throw new Exception("Page Name can not be null, please indicate on which page you reffering to");
+			}
+			
+			//Check whether the webElement is found or not
+			if(webElement==null)
+			{
+			    throw new Exception("WebElement is null,enter the valid web element");
+			}
+				//Check whether the string value is not empty or null
+			if((value==null||value.isEmpty()))
+			{
+				throw new Exception("Value is not defiened by the user,enter the valid value ");
+				
+			}
+			
+			
+			//selecting the element by indexValue
+			Select dropdown = new Select(webElement);
+			dropdown.selectByValue(value);
+			
+			System.out.println("The dropdown is selected by pageName"+pageName+ "elementname" +elementname +" Webelement " +webElement+
+					"Value"+ value );
+			
+			
+		}
+		catch(Exception e){
+			status = false;
+			System.out.println(e.getStackTrace());
+		}
+		return status;
+		
+		
+}
+	/**
+	 
+	 
+	 
+	 * @Method Name:selectDropDownByVisibleText
+	 * @Purpose:This method is used to select the drop down by using the visible text displayed in the application.
+	 * @Input Parameter:String VisibleText,WebElement element,PageName pageName,String Visible Text
+	 * @Output Parameter:boolean
+	 */
+public static  boolean selectDropdownByVisibleText(String elementname,String pageName, WebElement webElement,String visibleText)
+	
+	{
+		boolean status=true;
+		try{
+			System.out.println("Selecting the dropdown  by pageName"+pageName+ "elementname" +elementname +" Webelement " +webElement+
+					"VisibleText"+ visibleText );			
+			//Check whether the page Name is not null
+			if ((pageName==null))
+			{
+			
+				throw new Exception("Page Name cannot be null,please indicate on which page yor are referring to");
+			}
+			
+			//Check whether the webElement is found or not
+			if(webElement==null)
+			{
+			
+				throw new Exception("WebElement cannot be null,please enter the weblement");
+			  	}
+				//Check whether the string value is not empty or null
+			if((visibleText==null||visibleText.isEmpty()))
+			{
+				
+				throw new Exception("Text is not defiened by the user,please enter the text ");
+			  	}
+			
+			//selecting the element by indexValue
+			Select dropdown = new Select(webElement);
+			dropdown.selectByVisibleText(visibleText);
+			
+			System.out.println("The dropdown  is selected by pageName"+pageName+ "elementname" +elementname +" Webelement " +webElement+
+					"VisibleText"+ visibleText );			
+			
+		}
+		catch(Exception e){
+			status = false;
+			System.out.println(e.getStackTrace());
+		}
+		return status;
+		
+		
+}
+
+/**
+
+ 
+ * @param elementname 
+ * @Method Name:selectDropDownByXpath
+ * @Purpose:This method is used to select the drop down by using the Xpath of the dropdown.
+ * @Input Parameter:String Xpath
+ * @Output Parameter:boolean
+ */
+
+public static  boolean selectDropdownByXpath(String elementname,String pageName, WebElement webElement,String Xpath)
+{
+	boolean status= true;
+	try{
+		System.out.println("Selecting the dropdown  by pageName"+pageName+ "elementname" +elementname +" Webelement " +webElement+
+				"Xpath"+ Xpath );	
+		//Check whether the page Name is not null
+		if (pageName==null)
+		{
+		
+			throw new Exception("Page Name cannot be null,please indicate on which page yor are referring to");
+		}
+		
+		//check whether the web element is not null
+		
+		if(webElement==null)
+		{
+			
+				throw new Exception("WebElement cannot be null,please enter the web element");
+			 }
+			 
+		//Check whether the xpath is not empty or null
+		if((Xpath.isEmpty()||Xpath==null))
+		
+	
+		{
+			throw new Exception("Xpath is not defined by the user,please enter the xpath");
+		}
+		//check whether the web element is not null
+		
+		//selecting the element by Xpath
+		WebElement dropdownelement = driver.findElement(By.xpath(Xpath));
+		
+		//check whether the dropdownelement is not null
+				if(dropdownelement==null)
+				
+				
+				{
+					throw new Exception("DropdownElement is null,enter the valid dropdownnelement");
+					
+				}
+				System.out.println("The dropdown is selected  by pageName"+pageName+ "elementname" +elementname +" Webelement " +elementname+
+						"Xpath"+ Xpath );
+		
+				}
+	catch(Exception e){
+		status = false;
+		System.out.println(e.getStackTrace());
+	}
+	return status;
 
 }
+/**
+
+ 
+ * @Method Name:selectDropDownByCssSelector
+ * @Purpose:This method is used to select the drop down by using the CSSSeletor of the dropdown.
+ * @Input Parameter:String CssSelector
+ * @Output Parameter:boolean
+ */
+
+public static boolean selectDropdownByCssselector(String elementname,String pageName, WebElement webElement, String CssSelector )
+{
+	boolean status= true;
+	try{
+		System.out.println("Selecting the dropdown  by pageName"+pageName+ "elementname" +elementname +" Webelement " +webElement+
+				"CssSelector"+ CssSelector );
+		//Check whether the page Name is not null
+		if ((pageName==null))
+		{
+		
+			throw new Exception("Page Name cannot be null,please indicate on which page yor are referring to");
+		}
+		
+	   //Check whether the Web Element is not null
+		
+		if(webElement==null)
+			{
+				throw new Exception("WebElement cannot be equal to  null,enter the valid web element");
+			  	}
+		//Check whether the cssSelector is not empty or null
+		if((CssSelector.isEmpty()||CssSelector==null))
+		{
+		
+			throw new Exception("CssSelector is not defined by the user,enter the valid cssSelector");
+		}
+		
+		//selecting the element by CssSelector
+		WebElement dropdownelement = driver.findElement(By.cssSelector(CssSelector));
+		
+		//check whether the dropdownelement is not null
+				if(dropdownelement==null)
+				{
+				
+					throw new Exception("DropdownElement is null");
+				}
+				System.out.println(" Dropdown is selected  by pageName"+pageName+ "elementname" +elementname +" Webelement " +webElement+
+						"CssSelector"+ CssSelector );
+		
+	}
+	catch(Exception e){
+		status = false;
+		System.out.println(e.getStackTrace());
+	}
+	return status;
+
+}
+
+}
+
+
+
+
+
+
