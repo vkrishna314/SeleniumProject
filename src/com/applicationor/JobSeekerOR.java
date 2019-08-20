@@ -1,4 +1,4 @@
-package com.applicationOR;
+package com.applicationor;
 
 import org.openqa.selenium.WebElement;
 import org.openqa.selenium.support.FindBy;
@@ -85,6 +85,13 @@ public class JobSeekerOR {
    
 	@FindBy(xpath ="//input[@id='ctl00_ContentPlaceHolder2_rblstNotice_1']")
 	public static WebElement rdo_No;
+	
+ @FindBy(xpath ="//input[@id='ctl00_ContentPlaceHolder2_rblstNotice_0']")
+   
+	    public static WebElement drp_notice;
+	
+	
+	
 
 	
 	@FindBy(xpath="//label[normalize-space(text())='Language(s) Known']")
