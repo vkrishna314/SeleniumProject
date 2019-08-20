@@ -1,4 +1,4 @@
-package com.applicationor;
+package com.applicationOR;
 
 import org.openqa.selenium.WebElement;
 import org.openqa.selenium.support.FindBy;
