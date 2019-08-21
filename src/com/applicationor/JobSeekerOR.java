@@ -22,7 +22,7 @@ public class JobSeekerOR {
 	@FindBy(xpath="//select[@name='ctl00$ContentPlaceHolder2$ddlExp']")
 	public static WebElement drp_TotalExperience_Years;
 	
-<<<<<<< Updated upstream
+//Updated upstream
 	
 	//************************************** JobSeeker Page WebElements *******************************************
 	//*************************************  Step  1 **************************************************************
@@ -129,12 +129,11 @@ public class JobSeekerOR {
 	
 
 	@FindBy(xpath="//input[@id='ctl00_ContentPlaceHolder2_btnProfessional']")
-	public static WebElement btn_Continue;
+	public static WebElement btn_Continue1;
 	
 	
 
-=======
->>>>>>> Stashed changes
+//Stashed changes
 	@FindBy(xpath="//select[@id='ctl00_ContentPlaceHolder2_ddlExpMonths']")
 	public static WebElement drp_TotalExperience_Months;
 	
