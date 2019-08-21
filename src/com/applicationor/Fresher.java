@@ -36,4 +36,31 @@ public class Fresher {
 	@FindBy(xpath = "//input[@name='ctl00$ContentPlaceHolder2$txtmobile']")
 	public static WebElement edi_MobileCtNum;
 
+	@FindBy(xpath = "//label[normalize-space(text())='Landline No :']")
+	public static WebElement lbl_LandLineNum;
+
+	@FindBy(xpath = "//input[contains(@name,'Landline')]")
+	public static WebElement edi_LandLineNum;
+
+	@FindBy(xpath = "//label[normalize-space(text())='Location']")
+	public static WebElement lbl_Location;
+
+	@FindBy(xpath = "//select[ends-with(@name,'Location')]")
+	public static WebElement edi_Location;
+
+	@FindBy(xpath = "//label[normalize-space(text())='Gender']")
+	public static WebElement lbl_Gender;
+
+	@FindBy(xpath = "//input[@type='radio'][@value='Male']")
+	public static WebElement edi_MaleButton;
+
+	@FindBy(xpath = "//input[@type='radio'][@value='Female']")
+	public static WebElement edi_FemaleButton;
+
+	@FindBy(xpath = "//label[normalize-space(text())='Date Of Birth :']")
+	public static WebElement lbl_DateOfBirth;
+
+	@FindBy(xpath = "//input[@name='ctl00$ContentPlaceHolder2$txtdateOfBirth']")
+	public static WebElement edi_DateOfBirth;
+	
 }

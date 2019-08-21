@@ -69,11 +69,11 @@ public class JobSeekerOR {
 	@FindBy(xpath="//label[normalize-space(text())='Confirm Password']")
 	public static WebElement lbl_ConfirmPassword;
 	
-	@FindBy(xpath ="//input[@id='ctl00$ContentPlaceHolder2$txtconfirmpwd']")
+	@FindBy(xpath ="//input[@id='ctl00_ContentPlaceHolder2_txtconfirmpwd']")
 	public static WebElement edi_confirmpassword ;
 	
 	
-	@FindBy(xpath="//label[normalize-space(text())='Date of Birth']")
+	@FindBy(xpath="//div[@id='ctl00_ContentPlaceHolder2_UpdatePanel1']/div[5]/label[1]")
 	public static WebElement lbl_DOB;
 	
 	@FindBy(xpath ="//input[@id='ctl00_ContentPlaceHolder2_txtdateOfBirth']")
@@ -93,7 +93,7 @@ public class JobSeekerOR {
 	public static WebElement rdo_GenderFeMale;
 	
 	
-   @FindBy(xpath="//label[normalize-space(text())='Are you on Notice?']")
+   @FindBy(xpath="//div[@id='ctl00_ContentPlaceHolder2_UpdatePanel1']/div[7]/label[1]")
 	public static WebElement lbl_AreYouNotice ;
 
 
@@ -103,7 +103,7 @@ public class JobSeekerOR {
 	@FindBy(xpath ="//input[@id='ctl00_ContentPlaceHolder2_rblstNotice_1']")
 	public static WebElement rdo_No;
 	
- @FindBy(xpath ="//input[@id='ctl00_ContentPlaceHolder2_rblstNotice_0']")
+ @FindBy(xpath ="//select[@id='ctl00_ContentPlaceHolder2_ddlNoticePeriod']")
    
 	    public static WebElement drp_notice;
 	
@@ -111,11 +111,18 @@ public class JobSeekerOR {
 	
 
 	
-	@FindBy(xpath="//label[normalize-space(text())='Language(s) Known']")
+	@FindBy(xpath="//div[@id='ctl00_ContentPlaceHolder2_UpdatePanel1']/div[8]/label[1]")
 	public static WebElement lbl_languagesKnown ;
 	
 	@FindBy(xpath ="//input[@id='ctl00_ContentPlaceHolder2_txtlanguagesKnown']")
 	public static WebElement edi_LanguagesKnown;
+	
+	@FindBy(xpath ="//h3[contains(text(),'Why become a member of Talentzing.com?')]")
+	public static WebElement txt_SideHeader;
+	
+	@FindBy(xpath ="//h3[contains(text(),'Your Privacy and Confidentiality ')]")
+	public static WebElement txt_SideHeaderbottom;
+	
 
 	@FindBy(xpath="//input[@id='ctl00_ContentPlaceHolder2_btnProfessional']")
 	public static WebElement btn_Continue;
