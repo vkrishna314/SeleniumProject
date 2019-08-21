@@ -62,5 +62,14 @@ public class Fresher {
 
 	@FindBy(xpath = "//input[@name='ctl00$ContentPlaceHolder2$txtdateOfBirth']")
 	public static WebElement edi_DateOfBirth;
-	
+
+	@FindBy(xpath = "//input[@name='ctl00$ContentPlaceHolder2$btnSubmit']")
+	public static WebElement btn_Submit;
+
+	@FindBy(xpath = "//input[@id='chkAccept']")
+	public static WebElement chk_TermsAndConditions;
+
+	@FindBy(xpath = "//a[normalize-space(text())='Terms and Conditions']")
+	public static WebElement lnk_TermsAndConditions;
+
 }
