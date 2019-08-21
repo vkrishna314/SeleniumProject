@@ -8,16 +8,47 @@ public class JobSeekerOR {
 	//************************************************* Job Seeker Page WebElement **************************************
 		//=========================================================Step 2============================================================================================
 
+	@FindBy(xpath="//label[normalize-space(text())='Current Industry']")
+	public static WebElement lbl_CurrentIndustry;
 	
 	
 	@FindBy(xpath="//select[@id='ctl00_ContentPlaceHolder2_ddlIndustry']")
 	public static WebElement drp_CurrentIndustry;
 	
+	@FindBy(xpath="//span[text()='* Please specify industry.']")
+	public static WebElement txt_MandatoryCurrentIndustry;
+	
+	@FindBy(xpath="//label[normalize-space(text())='Role' ]")
+	public static WebElement lbl_Role;
+	
+	
 	@FindBy(xpath="//select[@id='ctl00_ContentPlaceHolder2_ddlrole']")
 	public static WebElement drp_Role;
 	
+	@FindBy(xpath="//span[text()='* Please select job type.']")
+	public static WebElement txt_MandatoryRole;
+	
+	@FindBy(xpath="//label[normalize-space(text())='Job Type']")
+	public static WebElement lbl_JobType;
+	
+	@FindBy(xpath="//select[@id='ctl00_ContentPlaceHolder2_ddlJobType']")
+	public static WebElement  drp_JobType;
+	
+	@FindBy(xpath="//span[text()='* Please select job type.']")
+	public static WebElement txt_MandatorytxtJobType;
+	
+	@FindBy(xpath="//label[normalize-space(text())='Current Designation :']")
+	public static WebElement lbl_CurrentDesignation;
+	
 	@FindBy(xpath="//input[@name='ctl00$ContentPlaceHolder2$txtCurrentDesignation']")
 	public static WebElement edi_CurrentDesignation;
+	
+	@FindBy(xpath="//span[text()='* Please select job type.']")
+	
+	public static WebElement txt_MandatorytextJobType;
+	
+	@FindBy(xpath="//label[normalize-space(text())='Current Designation :']")
+	public static WebElement lbl_TotalExperience;
 	
 	@FindBy(xpath="//select[@name='ctl00$ContentPlaceHolder2$ddlExp']")
 	public static WebElement drp_TotalExperience_Years;
@@ -26,7 +57,20 @@ public class JobSeekerOR {
 <<<<<<< Updated upstream
 <<<<<<< Updated upstream
 <<<<<<< Updated upstream
+<<<<<<< Updated upstream
+<<<<<<< Updated upstream
 
+=======
+=======
+>>>>>>> Stashed changes
+	@FindBy(xpath="//select[@id='ctl00_ContentPlaceHolder2_ddlExpMonths']")
+	public static WebElement drp_TotalExperience_months;
+	
+	
+<<<<<<< Updated upstream
+>>>>>>> Stashed changes
+=======
+>>>>>>> Stashed changes
 //Updated upstream
 =======
 =======
@@ -95,16 +139,26 @@ public class JobSeekerOR {
 	public static WebElement edi_FirstName;
 	
 	@FindBy(xpath="//span[@id='ctl00_ContentPlaceHolder2_RequiredFieldValidator3']")
-	public static WebElement lbl_FirstNameMandatorytext;
+	public static WebElement txt_FirstNameMandatorytext;
 
 	@FindBy(xpath="//input[@id='ctl00_ContentPlaceHolder2_txtlastname']")
 	public static WebElement edi_LastName;
+	
+	@FindBy(xpath="//span[@id='ctl00_ContentPlaceHolder2_RequiredFieldValidator2']")
+	public static WebElement txt_LastNameMandatorytext;
 
 	@FindBy(xpath="//input[@id='ctl00_ContentPlaceHolder2_txtemail']")
 	public static WebElement edi_Email;
+	
+	@FindBy(xpath="//span[@id='ctl00_ContentPlaceHolder2_RequiredFieldValidator21']")
+	public static WebElement txt_EmailMandatorytext;
 
 	@FindBy(xpath="//input[@id='ctl00_ContentPlaceHolder2_txtmobile']")
 	public static WebElement edi_ContactNumber;
+	
+	@FindBy(xpath="//span[@id='ctl00_ContentPlaceHolder2_RequiredFieldValidator23']")
+	public static WebElement txt_ContactMandatorytext;
+
 
 	@FindBy(xpath="//input[@id='ctl00_ContentPlaceHolder2_txtLandlineNo']")
 	public static WebElement edi_LandLineNumber;
@@ -131,8 +185,17 @@ public class JobSeekerOR {
 	@FindBy(xpath="//label[normalize-space(text())='Password']")
 	public static WebElement lbl_Password;
 	
+	@FindBy(xpath="//span[text()='* Please specify password.']")
+	public static WebElement txt_PasswordMandatorytext;
+	
+	
+	
 	@FindBy(xpath="//label[normalize-space(text())='Confirm Password']")
 	public static WebElement lbl_ConfirmPassword;
+	
+	@FindBy(xpath="//span[text()='* Please specify confirm password.']")
+	public static WebElement txt_ConfirmPasswordMandatorytext;
+	
 	
 	@FindBy(xpath ="//input[@id='ctl00_ContentPlaceHolder2_txtconfirmpwd']")
 	public static WebElement edi_confirmpassword ;
@@ -149,6 +212,10 @@ public class JobSeekerOR {
 	
 	@FindBy(xpath="//label[normalize-space(text())='Gender']")
 	public static WebElement lbl_Gender ;
+	
+	@FindBy(xpath="//span[text()='* Please specify gender.']")
+	public static WebElement txt_GenderMandatorytext;
+	
 	
 	
 	@FindBy(xpath ="//input[@id='ctl00_ContentPlaceHolder2_rdoGender_0']")
