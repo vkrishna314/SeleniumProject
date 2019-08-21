@@ -5,6 +5,24 @@ import org.openqa.selenium.support.FindBy;
 
 public class JobSeekerOR {
 	
+	//************************************************* Job Seeker Page WebElement **************************************
+		//=========================================================Step2============================================================================================
+
+	
+	
+	@FindBy(xpath="//select[@id='ctl00_ContentPlaceHolder2_ddlIndustry']")
+	public static WebElement drp_CurrentIndustry;
+	
+	@FindBy(xpath="//select[@id='ctl00_ContentPlaceHolder2_ddlrole']")
+	public static WebElement drp_Role;
+	
+	@FindBy(xpath="//input[@name='ctl00$ContentPlaceHolder2$txtCurrentDesignation']")
+	public static WebElement edi_CurrentDesignation;
+	
+	@FindBy(xpath="//select[@name='ctl00$ContentPlaceHolder2$ddlExp']")
+	public static WebElement drp_TotalExperience_Years;
+	
+<<<<<<< Updated upstream
 	
 	//************************************** JobSeeker Page WebElements *******************************************
 	//*************************************  Step  1 **************************************************************
@@ -112,5 +130,122 @@ public class JobSeekerOR {
 	
 	
 
+=======
+>>>>>>> Stashed changes
+	@FindBy(xpath="//select[@id='ctl00_ContentPlaceHolder2_ddlExpMonths']")
+	public static WebElement drp_TotalExperience_Months;
+	
+	@FindBy(xpath="//select[@id='ctl00_ContentPlaceHolder2_ddlLakhs']")
+	public static WebElement drp_CurrentCTC_Lakhs;
+	
+	@FindBy(xpath="//select[@id='ctl00_ContentPlaceHolder2_ddlThousands']")
+	public static WebElement drp_CurrentCTC_Thousands1;
+	
+	@FindBy(xpath="//select[@id='ctl00_ContentPlaceHolder2_ddlExpectedCTC']")
+	public static WebElement drp_ExpectedCTC_Lakhs;
+	
+	@FindBy(xpath="//select[@id='ctl00_ContentPlaceHolder2_ddlExpectedCTCThousand']")
+	public static WebElement drp_ExpectedCTC_Thousands;
+	
+	@FindBy(xpath="//input[@id='ctl00_ContentPlaceHolder2_txtkeywords']")
+	public static WebElement txt_Keyskills;
+	
+	@FindBy(xpath="//input[@id='ctl00_ContentPlaceHolder2_txtresumeheadline']")
+	public static WebElement txt_ResumeHeadline;
+	
+	@FindBy(xpath="//input[@id='ctl00_ContentPlaceHolder2_txtCurrentCompany']")
+	public static WebElement txt_CurrentCompany;
+	
+	@FindBy(xpath="//select[@id='ctl00_ContentPlaceHolder2_ddlocation']")
+	public static WebElement drp_CurrentLocation;
+	
+	@FindBy(xpath="//select[@id='ctl00_ContentPlaceHolder2_ddllocality']")
+	public static WebElement txt_Locaclity;
+	
+	@FindBy(xpath="//button[@class='multiselect dropdown-toggle btn-block btn btn-default']")
+	public static WebElement drp_PreferredLocation;
+	
+	@FindBy(xpath="//a[@id='backtostep1']")
+	public static WebElement btn_back;
+	
+	@FindBy(xpath="//input[@id='ctl00_ContentPlaceHolder2_btnEducation']")
+	public static WebElement btn_Continue;
+
+	
+	//************************************************* Job Seeker Page WebElement **************************************
+	
+	//=========================================================Step3============================================================================================
+	
+	@FindBy(xpath="//select[@id='ctl00_ContentPlaceHolder2_ddlEducation']")
+	public static WebElement drp_Education;
+	
+	@FindBy(xpath="//select[@id='ctl00_ContentPlaceHolder2_ddlinstitute']")
+	public static WebElement drp_Institute;
+
+	@FindBy(xpath="//select[@id='//select[@id='ctl00_ContentPlaceHolder2_ddlyop']']")
+	public static WebElement Drp_YearOfPassing;
+	
+	@FindBy(xpath="//input[@id='ctl00_ContentPlaceHolder2_flUpdPhoto']")
+	public static WebElement file_AttachPhoto_ChooseFile;
+	
+	@FindBy(xpath="//a[@id='record']/i")
+	public static WebElement Audioprofile_mike;
+	
+	@FindBy(xpath="//a[@id='pause']/i")
+	public static WebElement Audioprofile_pause;
+	
+	@FindBy(xpath="//a[@id='play']/i")
+	public static WebElement Audioprofile_play;
+	
+	@FindBy(xpath="//a[@id='download']/i")
+	public static WebElement Audioprofile_download;
+	
+	@FindBy(xpath="//input[@id='chkEmail']")
+	public static WebElement chk_ActiveJobAlerts_Email;
+	
+	@FindBy(xpath="//input[@id='chkSMS']")
+	public static WebElement chk_ActiveJobAlerts_SMS;
+	
+	@FindBy(xpath="//input[@id='chkChat']")
+	public static WebElement chk_ActiveJobAlerts_Chat;
+	
+	@FindBy(xpath="//input[@id='chkReferral']")
+	public static WebElement chk_ActiveJobAlerts_Referral_Chat;
+	
+	@FindBy(xpath="//input[@id='chkNone']")
+	public static WebElement chk_ActiveJobAlerts_None;
+	
+	@FindBy(xpath="//input[@id='chkTrainingEmail']")
+	public static WebElement chk_TrainingAlerts_Email;
+	
+	@FindBy(xpath="//input[@id='chkTrainingSMS']")
+	public static WebElement chk_TrainingAlerts_SMS;
+	
+	@FindBy(xpath="//input[@id='chkTrainingChat']")
+	public static WebElement chk_TrainingAlerts_Chat;
+	
+	@FindBy(xpath="//input[@id='chkTrainingNone']")
+	public static WebElement chk_TrainingAlerts_None;
+	
+	@FindBy(xpath="//input[@id='chkAccept']")
+	public static WebElement chk_Terms_Conditions;
+	
+	@FindBy(xpath="//a[text()='Terms and Conditions']")
+	public static WebElement Terms_and_conditions;
+	
+	@FindBy(xpath="//a[@id='backtostep2']")
+	public static WebElement btn_backbutton;
+	
+	@FindBy(xpath="//input[@name='ctl00$ContentPlaceHolder2$btnSubmit']")
+	public static WebElement btn_Submit;
+
+	
+	
+	
+	
+
+	
+	
+	
 
 }
