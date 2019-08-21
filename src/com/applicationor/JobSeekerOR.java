@@ -23,6 +23,7 @@ public class JobSeekerOR {
 	public static WebElement drp_TotalExperience_Years;
 	
 
+//Updated upstream
 	
 	//************************************** JobSeeker Page WebElements *******************************************
 	//*************************************  Step  1 **************************************************************
@@ -32,6 +33,9 @@ public class JobSeekerOR {
 
 	@FindBy(xpath="//input[@id='ctl00_ContentPlaceHolder2_txtfirstname']")
 	public static WebElement edi_FirstName;
+	
+	@FindBy(xpath="//span[@id='ctl00_ContentPlaceHolder2_RequiredFieldValidator3']")
+	public static WebElement lbl_FirstNameMandatorytext;
 
 	@FindBy(xpath="//input[@id='ctl00_ContentPlaceHolder2_txtlastname']")
 	public static WebElement edi_LastName;
