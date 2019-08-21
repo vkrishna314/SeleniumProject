@@ -99,6 +99,13 @@ public class JobSeekerOR {
 	
 	@FindBy(xpath ="//input[@id='ctl00_ContentPlaceHolder2_txtlanguagesKnown']")
 	public static WebElement edi_LanguagesKnown;
+	
+	@FindBy(xpath ="//h3[contains(text(),'Why become a member of Talentzing.com?')]")
+	public static WebElement txt_SideHeader;
+	
+	@FindBy(xpath ="//h3[contains(text(),'Your Privacy and Confidentiality ')]")
+	public static WebElement txt_SideHeaderbottom;
+	
 
 	@FindBy(xpath="//input[@id='ctl00_ContentPlaceHolder2_btnProfessional']")
 	public static WebElement btn_Continue;
