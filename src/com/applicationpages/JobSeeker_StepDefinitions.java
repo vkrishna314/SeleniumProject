@@ -6,12 +6,19 @@ import org.openqa.selenium.support.PageFactory;
 import com.applicationor.JobSeekerOR;
 import com.commonutils.CommonUtlities;
 
-<<<<<<< Updated upstream
-<<<<<<< Updated upstream
-<<<<<<< Updated upstream
-<<<<<<< Updated upstream
+
 public class JobSeeker_StepDefinitions extends CommonUtlities{
-<<<<<<< Updated upstream
+	
+	public static void verify_fields()
+	{
+		JobSeekerOR jobseekeror = PageFactory.initElements(driver, JobSeekerOR.class);
+		
+	  launchApplication("chrome", "https://www.talentzing.com/Jobseeker/JSRegistration.aspx");	
+	  IsElementDisplayed("Current Industry", "JobSeeker Personal Information", jobseekeror.edi_FirstName);
+        
+	}
+	
+
 	
 	
 	public void fillForm_PersononalInformation()
@@ -33,12 +40,9 @@ public class JobSeeker_StepDefinitions extends CommonUtlities{
 	
 	}
 
-import com.applicationor.JobSeekerOR;
-import com.commonutils.CommonUtlities;
 
-public class JobSeeker_StepDefinitions extends CommonUtlities{
-=======
->>>>>>> Stashed changes
+
+
 
 	////Validation of mandatory text for First Name
 	public void ValidateMandatoryField_PersonalInformation(){
@@ -50,7 +54,7 @@ public class JobSeeker_StepDefinitions extends CommonUtlities{
 		try{
 		if(JobSeekerOR.edi_FirstName.equals(null))
 		{
-		JobSeekerOR.btn_Continue.click();
+		JobSeekerOR.btn_ContinueStep1.click();
 		} else
 			
 				throw new Exception("Field value is not null");
@@ -93,40 +97,7 @@ public class JobSeeker_StepDefinitions extends CommonUtlities{
 			// TODO Auto-generated catch block
 			e.printStackTrace();
 		}
-<<<<<<< Updated upstream
-<<<<<<< Updated upstream
-	   }}
-=======
-=======
->>>>>>> Stashed changes
-=======
->>>>>>> Stashed changes
-=======
->>>>>>> Stashed changes
-public class JobSeeker_StepDefinitions extends CommonUtlities {
-	
-	public static void verify_fields()
-	{
-		JobSeekerOR jobseekeror = PageFactory.initElements(driver, JobSeekerOR.class);
-		
-	  launchApplication("chrome", "https://www.talentzing.com/Jobseeker/JSRegistration.aspx");	
-	  IsElementDisplayed("Current Industry", "JobSeeker Personal Information", jobseekeror.edi_FirstName);
-        
 	}
-	
 }
->>>>>>> Stashed changes
-=======
-=======
->>>>>>> Stashed changes
-	    
-	    //
-	   
-		   }
 
 	
-	}
-<<<<<<< Updated upstream
->>>>>>> Stashed changes
-=======
->>>>>>> Stashed changes

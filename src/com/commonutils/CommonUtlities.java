@@ -4,25 +4,19 @@ import org.openqa.selenium.By;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.WebElement;
 import org.openqa.selenium.chrome.ChromeDriver;
-<<<<<<< Updated upstream
-<<<<<<< Updated upstream
-<<<<<<< Updated upstream
-<<<<<<< Updated upstream
+
 import org.openqa.selenium.firefox.FirefoxDriver;
 import org.openqa.selenium.interactions.Actions;
 import org.openqa.selenium.support.ui.Select;
-=======
+
 import org.openqa.selenium.interactions.Actions;
->>>>>>> Stashed changes
-=======
+
 import org.openqa.selenium.interactions.Actions;
->>>>>>> Stashed changes
-=======
+
 import org.openqa.selenium.interactions.Actions;
->>>>>>> Stashed changes
-=======
+
 import org.openqa.selenium.interactions.Actions;
->>>>>>> Stashed changes
+
 
 public class CommonUtlities {
 
@@ -492,7 +486,7 @@ public class CommonUtlities {
 	 *               CSSSeletor of the dropdown.
 	 * @Input Parameter:String CssSelector
 	 * @Output Parameter:boolean
-	 * @author Shika
+	 * @author Shikha
 	 */
 
 	public static boolean selectDropdownByCssselector(String elementname,
@@ -575,13 +569,9 @@ public class CommonUtlities {
 		catch (Exception e) {
 			System.out.println(e.getMessage());
 		}
-
-<<<<<<< Updated upstream
-=======
-public static boolean IsElementDisplayed(String elementname, String pagename, WebElement element) {
->>>>>>> Stashed changes
-
 		return attributevalue;
+
+
 	}
 
 	// ******************Variables Declaration******************
