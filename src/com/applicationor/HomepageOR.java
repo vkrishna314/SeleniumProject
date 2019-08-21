@@ -18,6 +18,7 @@ public class HomepageOR  {
 
 	@FindBy(xpath="//label[text()='Fresher']")
 	public static WebElement lnk_Fresher;
+    
 	
 
 }

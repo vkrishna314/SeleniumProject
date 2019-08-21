@@ -4,9 +4,25 @@ import org.openqa.selenium.By;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.WebElement;
 import org.openqa.selenium.chrome.ChromeDriver;
+<<<<<<< Updated upstream
+<<<<<<< Updated upstream
+<<<<<<< Updated upstream
+<<<<<<< Updated upstream
 import org.openqa.selenium.firefox.FirefoxDriver;
 import org.openqa.selenium.interactions.Actions;
 import org.openqa.selenium.support.ui.Select;
+=======
+import org.openqa.selenium.interactions.Actions;
+>>>>>>> Stashed changes
+=======
+import org.openqa.selenium.interactions.Actions;
+>>>>>>> Stashed changes
+=======
+import org.openqa.selenium.interactions.Actions;
+>>>>>>> Stashed changes
+=======
+import org.openqa.selenium.interactions.Actions;
+>>>>>>> Stashed changes
 
 public class CommonUtlities {
 
@@ -560,8 +576,12 @@ public class CommonUtlities {
 			System.out.println(e.getMessage());
 		}
 
-		return attributevalue;
+<<<<<<< Updated upstream
+=======
+public static boolean IsElementDisplayed(String elementname, String pagename, WebElement element) {
+>>>>>>> Stashed changes
 
+		return attributevalue;
 	}
 
 	// ******************Variables Declaration******************
@@ -603,7 +623,7 @@ public class CommonUtlities {
 		return data;
 	}
 
-	public boolean IsElementSelected(String elementname, String pagename,
+	public static boolean IsElementSelected(String elementname, String pagename,
 			WebElement element) {
 
 		// ******************Variables Declaration******************
@@ -644,7 +664,7 @@ public class CommonUtlities {
 
 	}
 
-	public boolean IsElementDisplayed(String elementname, String pagename,
+	public static boolean IsElementDisplayed(String elementname, String pagename,
 			WebElement element) {
 
 		// ******************Variables Declaration******************
@@ -681,7 +701,7 @@ public class CommonUtlities {
 		return status;
 	}
 
-	public boolean IsElementEnabled(String elementname, String pagename,
+	public static boolean IsElementEnabled(String elementname, String pagename,
 			WebElement element) {
 
 		// ******************Variables Declaration******************
