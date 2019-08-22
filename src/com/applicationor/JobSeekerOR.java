@@ -56,8 +56,12 @@ public class JobSeekerOR {
 	
 	@FindBy(xpath="//select[@name='ctl00$ContentPlaceHolder2$ddlExp']")
 	public static WebElement drp_TotalExperience_Years;
+	
 
-	@FindBy(xpath="//select[@id='ctl00_ContentPlaceHolder2_ddlExpMonths']")
+	
+	
+	
+@FindBy(xpath="//select[@id='ctl00_ContentPlaceHolder2_ddlExpMonths']")
 	public static WebElement drp_TotalExperience_Months;
 	
 	@FindBy(xpath="//select[@id='ctl00_ContentPlaceHolder2_ddlLakhs']")
@@ -95,7 +99,6 @@ public class JobSeekerOR {
 	
 	@FindBy(xpath="//input[@id='ctl00_ContentPlaceHolder2_btnEducation']")
 	public static WebElement btn_ContinueStep2;
-
 
 
 	//************************************** JobSeeker Page WebElements *******************************************

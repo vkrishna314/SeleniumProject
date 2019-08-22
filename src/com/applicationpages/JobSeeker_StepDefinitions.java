@@ -12,8 +12,19 @@ import com.applicationor.JobSeekerOR;
 import com.commonutils.CommonUtlities;
 
 
-
 public class JobSeeker_StepDefinitions extends CommonUtlities{
+	
+	public static void verify_fields()
+	{
+		JobSeekerOR jobseekeror = PageFactory.initElements(driver, JobSeekerOR.class);
+		
+	  launchApplication("chrome", "https://www.talentzing.com/Jobseeker/JSRegistration.aspx");	
+	  IsElementDisplayed("Current Industry", "JobSeeker Personal Information", jobseekeror.edi_FirstName);
+        
+	}
+	
+
+	
 	
 	public static void verify_fields()
 	{
@@ -49,7 +60,6 @@ public class JobSeeker_StepDefinitions extends CommonUtlities{
 				"Telugu, Hindi, English");
 
 	}
-
 
 
 
@@ -121,6 +131,19 @@ public class JobSeeker_StepDefinitions extends CommonUtlities{
 public void validate_AllMandatoryFields_PersonalInformation() {
 		
 		JobSeekerOR jobseekeror = PageFactory.initElements(driver, JobSeekerOR.class);
+		//Checking for the null value in FirstName Field
+		try{
+		if(JobSeekerOR.edi_FirstName.equals(null))
+		{
+		JobSeekerOR.btn_ContinueStep1.click();
+		} else
+			
+				throw new Exception("Field value is not null");
+			} catch (Exception e1) {
+				// TODO Auto-generated catch block
+				e1.printStackTrace();
+			}
+	
 		
 		validate_MandatoryFields_PersonalInformation("First Name ",jobseekeror.lbl_FirstName,errorMessages().get("firstnameerror").toString(),
 				jobseekeror.txt_FirstNameMandatorytext);
@@ -192,15 +215,7 @@ public void validate_AllMandatoryFields_PersonalInformation() {
 			// TODO Auto-generated catch block
 			System.out.println("error in validate_MandatoryFields_PersonalInformation" + e.getMessage());
 		}
-
-			
-	
 	}
-
-
+}
 
 	
-		
-	}
-
-

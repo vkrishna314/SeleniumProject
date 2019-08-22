@@ -8,6 +8,18 @@ import org.openqa.selenium.chrome.ChromeDriver;
 import org.openqa.selenium.firefox.FirefoxDriver;
 import org.openqa.selenium.interactions.Actions;
 import org.openqa.selenium.support.ui.Select;
+<<<<<<< Updated upstream
+=======
+
+import org.openqa.selenium.interactions.Actions;
+
+import org.openqa.selenium.interactions.Actions;
+
+import org.openqa.selenium.interactions.Actions;
+
+import org.openqa.selenium.interactions.Actions;
+
+>>>>>>> Stashed changes
 
 public class CommonUtlities {
 
@@ -554,7 +566,10 @@ public class CommonUtlities {
 			System.out.println(e.getMessage());
 		}
 		return attributevalue;
+<<<<<<< Updated upstream
 
+=======
+>>>>>>> Stashed changes
 
 
 	}
