@@ -25,6 +25,17 @@ public class JobSeeker_StepDefinitions extends CommonUtlities{
 	
 
 	
+	public static void verify_fields()
+	{
+		JobSeekerOR jobseekeror = PageFactory.initElements(driver, JobSeekerOR.class);
+		
+	  launchApplication("chrome", "https://www.talentzing.com/Jobseeker/JSRegistration.aspx");	
+	  IsElementDisplayed("Current Industry", "JobSeeker Personal Information", jobseekeror.edi_FirstName);
+        
+	}
+	
+
+	
 	
 	public static void verify_fields()
 	{
