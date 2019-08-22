@@ -25,6 +25,7 @@ public class JobSeekerOR {
 	@FindBy(xpath="//select[@id='ctl00_ContentPlaceHolder2_ddlrole']")
 	public static WebElement drp_Role;
 	
+<<<<<<< Updated upstream
 	@FindBy(xpath="//span[text()='* Please select job type.']")
 	public static WebElement txt_MandatoryRole;
 	
@@ -39,6 +40,10 @@ public class JobSeekerOR {
 	
 	@FindBy(xpath="//label[normalize-space(text())='Current Designation :']")
 	public static WebElement lbl_CurrentDesignation;
+=======
+	@FindBy(xpath="//select[@id='ctl00_ContentPlaceHolder2_ddlJobType']")
+	public static WebElement drp_JobType;
+>>>>>>> Stashed changes
 	
 	@FindBy(xpath="//input[@name='ctl00$ContentPlaceHolder2$txtCurrentDesignation']")
 	public static WebElement edi_CurrentDesignation;
@@ -52,12 +57,17 @@ public class JobSeekerOR {
 	
 	@FindBy(xpath="//select[@name='ctl00$ContentPlaceHolder2$ddlExp']")
 	public static WebElement drp_TotalExperience_Years;
+<<<<<<< Updated upstream
 	
 
 	
 	
 	
 @FindBy(xpath="//select[@id='ctl00_ContentPlaceHolder2_ddlExpMonths']")
+=======
+
+	@FindBy(xpath="//select[@id='ctl00_ContentPlaceHolder2_ddlExpMonths']")
+>>>>>>> Stashed changes
 	public static WebElement drp_TotalExperience_Months;
 	
 	@FindBy(xpath="//select[@id='ctl00_ContentPlaceHolder2_ddlLakhs']")
@@ -97,6 +107,10 @@ public class JobSeekerOR {
 	public static WebElement btn_ContinueStep2;
 
 
+<<<<<<< Updated upstream
+=======
+	
+>>>>>>> Stashed changes
 	//************************************** JobSeeker Page WebElements *******************************************
 	//*************************************  Step  1 **************************************************************
 
@@ -227,7 +241,14 @@ public class JobSeekerOR {
 	public static WebElement btn_ContinueStep1;
 	
 	
+<<<<<<< Updated upstream
 
+=======
+
+	
+
+	
+>>>>>>> Stashed changes
 	//************************************************* Job Seeker Page WebElement **************************************
 	
 	//=========================================================Step 3============================================================================================
