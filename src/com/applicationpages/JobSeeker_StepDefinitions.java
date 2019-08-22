@@ -1,18 +1,17 @@
 package com.applicationpages;
 
-<<<<<<< Updated upstream
-=======
+
 import java.util.HashMap;
 import java.util.Map;
 
->>>>>>> Stashed changes
+
 import org.openqa.selenium.WebElement;
 import org.openqa.selenium.support.PageFactory;
 
 import com.applicationor.JobSeekerOR;
 import com.commonutils.CommonUtlities;
 
-<<<<<<< Updated upstream
+
 
 public class JobSeeker_StepDefinitions extends CommonUtlities{
 	
@@ -28,22 +27,10 @@ public class JobSeeker_StepDefinitions extends CommonUtlities{
 
 	
 	
-	public void fillForm_PersononalInformation()
-	{
-		JobSeekerOR jobseekeror=PageFactory.initElements(driver, JobSeekerOR.class);
-		
-=======
-public class JobSeeker_StepDefinitions extends CommonUtlities {
-
-	public static JobSeekerOR jobseekeror = PageFactory.initElements(driver, JobSeekerOR.class);
-
-	/**
-	 * 
-	 */
+	
 	public void fillForm_PersononalInformation() {
 		JobSeekerOR jobseekeror = PageFactory.initElements(driver, JobSeekerOR.class);
 
->>>>>>> Stashed changes
 		sendDataByClearing("First Name", "Job Seeker_Personal Information", jobseekeror.edi_FirstName, "Vamshi");
 		sendDataByClearing("Last Name", "Job Seeker_Personal Information", jobseekeror.edi_LastName, "Krishna");
 		sendDataByClearing("Email", "Job Seeker_Personal Information", jobseekeror.edi_Email,
@@ -63,7 +50,7 @@ public class JobSeeker_StepDefinitions extends CommonUtlities {
 
 	}
 
-<<<<<<< Updated upstream
+
 
 
 
@@ -73,52 +60,8 @@ public class JobSeeker_StepDefinitions extends CommonUtlities {
 		
 		JobSeekerOR jobseekeror = PageFactory.initElements(driver, JobSeekerOR.class);
 		
-		
-		//Checking for the null value in FirstName Field
-		try{
-		if(JobSeekerOR.edi_FirstName.equals(null))
-		{
-		JobSeekerOR.btn_ContinueStep1.click();
-		} else
-			
-				throw new Exception("Field value is not null");
-			} catch (Exception e1) {
-				// TODO Auto-generated catch block
-				e1.printStackTrace();
-			}
-	
-		
-			
-		
-		String expected_msg= "* Please specify firstname";
-	    String actual_msg = getTextForWebElement("First Name", "JobSeeker Personal Informaton", JobSeekerOR.txt_FirstNameMandatorytext	);
-	    		try{
-	    if(expected_msg.equals(actual_msg))
-	     {
-		
-               System.out.println("Correct validations of first name");
-		
-	     } else
-			
-				throw  new Exception("Validation text is not displayed");
-			} catch (Exception e) {
-				// TODO Auto-generated catch block
-				e.printStackTrace();
-			}
-	    
-	    //Colour validation of Mandatory text fields
-	    try{
-	   if( isElementColorRed( JobSeekerOR.txt_FirstNameMandatorytext))
-	   {
-	    
-	    System.out.println("The colour is matched ");
-	    
-
-        } else
-		
-			throw new Exception("Colour Mismatch");
-=======
-	public void fillForm_ProfessionalDetails() {
+	}
+			public void fillForm_ProfessionalDetails() {
 		JobSeekerOR jobseekeror = PageFactory.initElements(driver, JobSeekerOR.class);
 
 		// Select Current Industry
@@ -175,67 +118,89 @@ public class JobSeeker_StepDefinitions extends CommonUtlities {
 				jobseekeror.drp_CurrentIndustry, "Accounting/Finance");
 
 	}
-
-	public void validate_AllMandatoryFields_PersonalInformation() {
-		validate_MandatoryFields_PersonalInformation(errorMessages().get("firstnameerror").toString(),
-				jobseekeror.lbl_FirstNameMandatorytext);
-	}
+public void validate_AllMandatoryFields_PersonalInformation() {
+		
+		JobSeekerOR jobseekeror = PageFactory.initElements(driver, JobSeekerOR.class);
+		
+		validate_MandatoryFields_PersonalInformation("First Name ",jobseekeror.lbl_FirstName,errorMessages().get("firstnameerror").toString(),
+				jobseekeror.txt_FirstNameMandatorytext);
+		validate_MandatoryFields_PersonalInformation("Last Name",jobseekeror.lbl_LastName,errorMessages().get("lastnameerror").toString(),
+				jobseekeror.txt_LastNameMandatorytext);
+		validate_MandatoryFields_PersonalInformation("EmailId",jobseekeror.lbl_Email,errorMessages().get("emailiderror").toString(),
+				jobseekeror.txt_EmailMandatorytext);
+		validate_MandatoryFields_PersonalInformation("Contact Number",jobseekeror.lbl_ContactNumber,errorMessages().get("contactnumbererror").toString(),
+				jobseekeror.txt_ContactMandatorytext);
+		validate_MandatoryFields_PersonalInformation("Password",jobseekeror.lbl_Password,errorMessages().get("passworderror").toString(),
+				jobseekeror.txt_PasswordMandatorytext);
+		validate_MandatoryFields_PersonalInformation("ConfirmPassword",jobseekeror.lbl_ConfirmPassword,errorMessages().get("confirmpassworderror").toString(),
+				jobseekeror.txt_ConfirmPasswordMandatorytext);
+		validate_MandatoryFields_PersonalInformation("Gender",jobseekeror.lbl_Gender,errorMessages().get("gendererror").toString(),
+				jobseekeror.txt_GenderMandatorytext);
+}
 
 	public static Map errorMessages() {
-		Map<String, String> map = new HashMap();
-		map.put("firstnameerror", "* Please specify name first");
-		map.put("lastnamerror", "* Please specify lastname.");
+		HashMap<String,String> map = new HashMap<String, String>();
+		map.put("firstnameerror", "* Please specify firstname.");
+		map.put("lastnameerror", "* Please specify lastname.");
+		map.put("emailiderror", "* Please specify email id.");
+		map.put("contactnumbererror", "* Please specify contact number.");
+		map.put("passworderror", "* Please specify password.");
+		map.put("confirmpassworderror", "* Please specify confirm password.");
+		map.put("gendererror", "* Please specify gender.");
 		return map;
 	}
 
-	public void validate_MandatoryFields_PersonalInformation(String object, WebElement element) {
-
+	
+	public void validate_MandatoryFields_PersonalInformation(String elementname,WebElement element,String object, WebElement mandatorytxtelement) {
+		
+		
+		JobSeekerOR jobseekeror = PageFactory.initElements(driver, JobSeekerOR.class);
+		
 		// Checking for the null value in FirstName Field
 		try {
 			if (!(element == null)) {
 				jobseekeror.btn_ContinueStep1.click();
 			} else
 
-				throw new Exception("First Name is null");
+				throw new Exception(elementname+" is null");
 		} catch (Exception e1) {
 			// TODO Auto-generated catch block
 			e1.printStackTrace();
 		}
 
 		// Validation of mandatory text for first name
-		String msg = getTextForWebElement(object, "JobSeeker Personal Informaton", element);
+		String msg = getTextForWebElement(elementname, "JobSeeker Personal Informaton", mandatorytxtelement);
 		try {
 			if (msg.equals(object))
 			{
 				System.out.println("Correct validations of" + object);
 				
-				if (isElementColorRed(element))
+				if (isElementColorRed(mandatorytxtelement))
 					
 					System.out.println("The colour is matched ");
 				
 				else
 					
-					throw new Exception("Colour Mismatch");
+					throw new Exception(" Colour Mismatch");
 			}
 			else
 
 				throw new Exception("Validation text is not displayed");
 
->>>>>>> Stashed changes
+
 		} catch (Exception e) {
 			// TODO Auto-generated catch block
 			System.out.println("error in validate_MandatoryFields_PersonalInformation" + e.getMessage());
 		}
-<<<<<<< Updated upstream
+
+			
+	
 	}
-}
+
+
 
 	
-=======
-
-		// Colour validation of Mandatory text fields
-
+		
 	}
 
-}
->>>>>>> Stashed changes
+

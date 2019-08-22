@@ -4,29 +4,10 @@ import org.openqa.selenium.By;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.WebElement;
 import org.openqa.selenium.chrome.ChromeDriver;
-<<<<<<< Updated upstream
 
 import org.openqa.selenium.firefox.FirefoxDriver;
 import org.openqa.selenium.interactions.Actions;
 import org.openqa.selenium.support.ui.Select;
-
-import org.openqa.selenium.interactions.Actions;
-
-import org.openqa.selenium.interactions.Actions;
-
-import org.openqa.selenium.interactions.Actions;
-
-import org.openqa.selenium.interactions.Actions;
-
-=======
-import org.openqa.selenium.firefox.FirefoxDriver;
-import org.openqa.selenium.interactions.Actions;
-import org.openqa.selenium.support.ui.Select;
-import org.openqa.selenium.interactions.Actions;
-import org.openqa.selenium.interactions.Actions;
-import org.openqa.selenium.interactions.Actions;
-import org.openqa.selenium.interactions.Actions;
->>>>>>> Stashed changes
 
 public class CommonUtlities {
 
@@ -69,7 +50,7 @@ public class CommonUtlities {
 			switch (browser.toLowerCase()) {
 			case "chrome":
 				System.setProperty("webdriver.chrome.driver",
-						"C:\\Users\\Vamsikrishna\\Downloads\\chromedriver_win32\\chromedriver.exe");
+						"C://Users//HOME//Desktop//Drivers//chromedriver.exe");
 				driver = new ChromeDriver();
 				break;
 			case "ff":
@@ -573,11 +554,9 @@ public class CommonUtlities {
 			System.out.println(e.getMessage());
 		}
 		return attributevalue;
-<<<<<<< Updated upstream
 
 
-=======
->>>>>>> Stashed changes
+
 	}
 
 	// ******************Variables Declaration******************
