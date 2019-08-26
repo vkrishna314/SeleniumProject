@@ -71,5 +71,24 @@ public class Fresher {
 
 	@FindBy(xpath = "//a[normalize-space(text())='Terms and Conditions']")
 	public static WebElement lnk_TermsAndConditions;
+	
+	@FindBy(xpath = "//*[@id='ctl00_ContentPlaceHolder2_lblCheck]")
+	public static WebElement error_TermsAndConditions;
+	
+	@FindBy (xpath = "//*[@id='ctl00_ContentPlaceHolder2_RequiredFieldValidator3']")
+	public static WebElement error_FirstName;
+	
+	@FindBy (xpath = "//*[@id='ctl00_ContentPlaceHolder2_RequiredFieldValidator2']")
+	public static WebElement error_LastName;
+	
+	@FindBy (xpath = "//*[@id='ctl00_ContentPlaceHolder2_RequiredFieldValidator21]")
+	public static WebElement error_EmailID;
+	
+	@FindBy (xpath = "//*[@id='ctl00_ContentPlaceHolder2_RequiredFieldValidator23']")
+	public static WebElement error_ContactNo;
+	
+	@FindBy (xpath = "//*[@id='ctl00_ContentPlaceHolder2_rfvPwd']")
+	public static WebElement error_PassWord;
+	
 
 }
